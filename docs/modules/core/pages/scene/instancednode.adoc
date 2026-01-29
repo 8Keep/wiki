@@ -4,7 +4,7 @@
 :keywords: spatial, node, geometry, optimization
 
 
-Using InstancedNode is a way to reduce drawcalls by optimizing the amount of objects being drawn at the same time.
+Using InstancedNode is a way to reduce drawcalls by optimizing the amount of objects being drawn at the same time. The amount of triangles will stay the same.
 
 Example:
 [source,java]
@@ -39,15 +39,13 @@ and
 instancedNode.instance();
 ----
 
-Once instance() is called, the node builds its own representation of the Geometries, and modifying the original geometry and geometry2 objects will have no effect on the node.
-
-If you want to move the spatials inside instancedNode, you need to first retrieve them, using the children list. It's a good idea to name the geometries suitably, to make this easier.
-
-[source,java]
-----
-Spatial geometry = instancedNode.getChildNamed("randomGeom");
-geometry.setLocalTranslation(10, 0, 10);
-----
+Once instanced, you can still manipulate the spatials inside the node, as opposed to a BatchNode.
 
 == See also
+https://wiki.jmonkeyengine.org/docs/3.4/tutorials/concepts/optimization.html
+
+https://github.com/jMonkeyEngine/jmonkeyengine/blob/master/jme3-core/src/main/java/com/jme3/scene/BatchNode.java
+
 https://github.com/jMonkeyEngine/jmonkeyengine/blob/master/jme3-examples/src/main/java/jme3test/scene/instancing/TestInstanceNode.java
+
+
