@@ -41,7 +41,7 @@ instancedNode.instance();
 
 Once instance() is called, the node builds its own representation of the Geometries, and modifying the original geometry and geometry2 objects will have no effect on the node.
 
-If you want to move the spatials inside instancedNode, you need to first retrieve, using the children list. It's a good idea to name the geometries suitably, to make this easier.
+If you want to move the spatials inside instancedNode, you need to first retrieve them, using the children list. It's a good idea to name the geometries suitably, to make this easier.
 
 [source,java]
 ----
