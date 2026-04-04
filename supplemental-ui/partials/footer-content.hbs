@@ -1,19 +1,89 @@
 <footer class="footer">
   <p>Copyright 2020 jMonkeyEngine Wiki Contributors. Licensed BSD-3.</p>
 </footer>
-{{#if env.ALGOLIA_API_KEY}}
-<script src="{{uiRootPath}}/js/vendor/docsearch.min.js"></script>
-<!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js -->
-<script>
-var search = docsearch({
-  apiKey: '{{env.ALGOLIA_API_KEY}}',
-  indexName: '{{env.ALGOLIA_IDX_NAME}}',
-  inputSelector: '#search-input',
-  autocompleteOptions: { hint: false, keyboardShortcuts: ['s'] },
-  algoliaOptions: { hitsPerPage: 10 }
-}).autocomplete
-search.on('autocomplete:closed', function () { search.autocomplete.setVal() })
-function focusSearchInput () { document.querySelector('#search-input').focus() }
-if (document.querySelector('.home-link.is-current')) window.addEventListener('load', focusSearchInput)
+<span hidden data-pagefind-filter="version:{{page.version}}"></span>
+<script type="module">
+  const currentVersion = '{{page.version}}';
+  const expectedPath = `/docs/${currentVersion}/`;
+  const root = document.querySelector('#search');
+
+  if (!root) {
+    console.error('Search root not found');
+  } else {
+    root.innerHTML = `
+      <input type="search" class="wiki-search-input" placeholder="Search docs" aria-label="Search docs" />
+      <div class="wiki-search-results" hidden></div>
+    `;
+
+    const input = root.querySelector('.wiki-search-input');
+    const panel = root.querySelector('.wiki-search-results');
+
+    const pagefind = await import('/pagefind/pagefind.js');
+
+    function clearResults() {
+      panel.innerHTML = '';
+      panel.hidden = true;
+    }
+
+    function renderItems(items) {
+      if (!items.length) {
+        panel.innerHTML = '<p class="wiki-search-empty">No results in this version.</p>';
+        panel.hidden = false;
+        return;
+      }
+
+      const html = items
+        .map((item) => `
+          <article class="wiki-search-item">
+            <a class="wiki-search-link" href="${item.url}">${item.meta?.title || item.url}</a>
+            <p class="wiki-search-excerpt">${item.excerpt || ''}</p>
+          </article>
+        `)
+        .join('');
+
+      panel.innerHTML = html;
+      panel.hidden = false;
+    }
+
+    async function search(term) {
+      const query = term.trim();
+      if (!query) {
+        clearResults();
+        return;
+      }
+
+      const response = await pagefind.search(query, {
+        filters: {
+          version: currentVersion,
+        },
+      });
+
+      const loaded = await Promise.all(response.results.slice(0, 20).map((r) => r.data()));
+      const strict = loaded.filter((item) => {
+        try {
+          return new URL(item.url, window.location.origin).pathname.includes(expectedPath);
+        } catch (e) {
+          return (item.url || '').includes(expectedPath);
+        }
+      });
+
+      renderItems(strict.slice(0, 8));
+    }
+
+    let timer;
+    input.addEventListener('input', () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        search(input.value).catch((err) => {
+          console.error('Search failed', err);
+          panel.innerHTML = '<p class="wiki-search-empty">Search unavailable.</p>';
+          panel.hidden = false;
+        });
+      }, 160);
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!root.contains(event.target)) clearResults();
+    });
+  }
 </script>
-{{/if}}

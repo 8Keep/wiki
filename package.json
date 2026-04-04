@@ -8,9 +8,12 @@
     "lib": "lib"
   },
   "scripts": {
-    "buildDocs": "npx antora --stacktrace wiki-playbook.yml"
+    "buildDocs": "npx antora --stacktrace wiki-playbook.yml && npx pagefind --site build/site"
   },
   "private": true,
+  "engines": {
+    "node": ">=20"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jMonkeyEngine/wiki.git"
@@ -24,6 +27,7 @@
   "homepage": "https://github.com/jMonkeyEngine/wiki#readme",
   "dependencies": {
     "@antora/cli": "^3.0.1",
+    "pagefind": "^1.4.0",
     "@antora/site-generator": "^3.0.1",
     "asciidoctor-emoji": "^0.3.4"
   }
