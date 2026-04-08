@@ -7,7 +7,7 @@
 ** Networking
 *** xref:networking/open_game_finder.adoc[Open Game Finder]
 ** Entity System
-*** xref:es/entitysystem.adoc[The Zay-ES Entity System]
+*** xref:es/entitysystem/entitysystem.adoc[The Zay-ES Entity System]
 ** Artificial Intelligence
 *** xref:ai/recast.adoc[Recast Navigation]
 *** xref:ai/building_recast.adoc[Updating and building Recast Native Bindings]

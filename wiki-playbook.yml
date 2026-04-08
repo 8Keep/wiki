@@ -5,11 +5,17 @@ site:
   start_page: docs::documentation.adoc
 content:
   sources:
-  - url: https://github.com/jMonkeyEngine/wiki.git
-    branches: [HEAD, v3.8, v3.4, v3.3, v3.2]
+  - url: .
+    branches: HEAD
     start_path: docs
   - url: https://github.com/jMonkeyEngine/wiki-ui
     branches: HEAD
+    start_path: docs
+  - url: https://gitlab.com/antora/antora.git
+    branches: v3.1.x
+    start_path: docs
+  - url: https://gitlab.com/antora/antora-ui-default.git
+    branches: master
     start_path: docs
   - url: .
     branches: HEAD

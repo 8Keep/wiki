@@ -10,7 +10,7 @@ There are currently two ways to request to have your games or projects featured 
 * Making Unique Marketing Requests
 
 
-=== 1.) Opt-in to the Marketing Pool:
+== 1. Opt-in to the Marketing Pool
 Each jME user/studio can submit a specific project to be listed in the JME Marketing Pool, and these projects will be routinely posted in as fair of a rotation as possible.  
 
 The current marketing pool can be found here: https://docs.google.com/spreadsheets/d/19ib-riULtnyA7_-heG-rHTKv9L0QF7DOKvgbua9aMpI/edit?usp=sharing
@@ -23,7 +23,7 @@ And you can opt-in by posting to the jME Marketing Thread with the following inf
 * Best place(s) to find Media
 * Extra Notes (optional)
 
-===== Submission Example:
+=== Submission Example
 
 **Project Name**: The Afflicted Forests
 
@@ -34,11 +34,11 @@ And you can opt-in by posting to the jME Marketing Thread with the following inf
 **Extra Notes**: Coming soon to Steam; currently in closed beta; can contact developer for beta keys
 
 
-TIP: Be sure to provide links to as many media sources as possible for your project. By provoding more easily accessible media, you can increase the likelihood and frequenecy that the marketing manager will select your content.
+TIP: Be sure to provide links to as many media sources as possible for your project. By providing more easily accessible media, you can increase the likelihood and frequency that the marketing manager will select your content.
 
 
 
-=== 2.) Unique Marketing Requests:
+== 2. Unique Marketing Requests
 You may also submit a request to the jME Marketing Thread providing a curated post with some accompanying images or videos that you want posted. 
 
 The Marketing Manager still reserves the right to make some edits or deny requests altogether. 
@@ -70,7 +70,7 @@ Help us extend our reach by following and interacting with our pages; we will fo
 image:marketing/marketingApes.jpg[marketingApes.jpg,width="",height=""]
 
 
-=== What is posted to each platform?
+== What is posted to each platform?
 
 The majority of posts will be made to Twitter, Bluesky, LinkedIn, Facebook, and Nostr. 
 These platforms all have similar functionality and are receptive to the widest range of media, whether it be purely text-based posts or images and videos. This allows the same post to be
