@@ -26,9 +26,9 @@
   },
   "homepage": "https://github.com/jMonkeyEngine/wiki#readme",
   "dependencies": {
-    "@antora/cli": "^3.0.1",
-    "pagefind": "^1.4.0",
-    "@antora/site-generator": "^3.0.1",
-    "asciidoctor-emoji": "^0.3.4"
+    "@antora/cli": "^3.1.14",
+    "@antora/site-generator": "^3.1.14",
+    "asciidoctor-emoji": "^0.5.0",
+    "pagefind": "^1.5.0"
   }
 }
