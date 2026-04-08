@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Set up a UI Project :: jMonkeyEngine Docs</title>
+    <link rel="canonical" href="https://wiki.jmonkeyengine.org/wiki-ui/set-up-project.html">
+    <link rel="prev" href="prerequisites.html">
+    <link rel="next" href="build-preview-ui.html">
+    <meta name="generator" content="Antora 3.0.1">
+    <link rel="stylesheet" href="../_/css/site.css">
+<meta property="og:image" content="https://wiki.jmonkeyengine.org/_/img/iconx128.png">
+<meta property="og:description" content="Set up a UI Project">
+<meta property="og:title" content="jMonkeyEngine Docs">
+<link rel="stylesheet" href="../_/css/site-extra.css">
+<link rel="icon" href="../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://wiki.jmonkeyengine.org">
+        <img alt="" src="../_/img/jme-logo.png" height="32" type="image/x-icon">
+      </a>
+      <div class="navbar-item hide-for-print">
+        <div id="search"></div>
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item theme-switch-wrapper">
+          <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+          </label>
+        </div>
+        <a class="navbar-item" href="https://github.com/jmonkeyengine/wiki">Github</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="wiki-ui" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Wiki UI</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="prerequisites.html">UI Development Prerequisites</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="set-up-project.html">Set up a UI Project</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="build-preview-ui.html">Build and Preview the UI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="development-workflow.html">UI Development Workflow</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="templates.html">Work with the Handlebars Templates</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="stylesheets.html">Work with the CSS Stylesheets</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="add-fonts.html">Add Fonts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="style-guide.html">UI Element Styles</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="inline-text-styles.html">Inline Text</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="admonition-styles.html">Admonitions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="list-styles.html">Lists</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="sidebar-styles.html">Sidebars</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ui-macro-styles.html">UI Macros</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Wiki UI</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">JME</span>
+      <ul class="versions">
+        <li class="version">
+          <a href="../docs/3.9/documentation.html">3.9</a>
+        </li>
+        <li class="version">
+          <a href="../docs/3.8/documentation.html">3.8</a>
+        </li>
+        <li class="version">
+          <a href="../docs/3.4/documentation.html">3.4</a>
+        </li>
+        <li class="version">
+          <a href="../docs/3.3/documentation.html">3.3</a>
+        </li>
+        <li class="version">
+          <a href="../docs/3.2/documentation.html">3.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Wiki Contribution</span>
+      <ul class="versions">
+        <li class="version">
+          <a href="../docs-wiki/3.8/wiki_contributor.html">3.8</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Wiki UI</span>
+      <ul class="versions">
+        <li class="version is-current">
+          <a href="index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Wiki UI</a></li>
+    <li><a href="set-up-project.html">Set up a UI Project</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/jMonkeyEngine/wiki-ui/edit/master/docs/modules/ROOT/pages/set-up-project.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Set up a UI Project</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Before you can start working on the UI, you need to grab the sources and initialize the project.
+The sources can be <a href="https://gitlab.com/antora/antora-ui-default.git">Antora&#8217;s default UI</a> or an existing UI project structured to work with Antora.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="fetch-the-default-ui-project"><a class="anchor" href="#fetch-the-default-ui-project"></a>Fetch the Default UI project</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To start, clone the default UI project using git:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ git clone https://gitlab.com/antora/antora-ui-default.git &amp;&amp;
+  cd "`basename $_`"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The example above clones Antora&#8217;s default UI project and then switches to the project folder on your filesystem.
+Stay in this project folder in order to initialize the project using npm.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="install-dependencies"><a class="anchor" href="#install-dependencies"></a>Install dependencies</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Next, you&#8217;ll need to initialize the project.
+Initializing the project essentially means downloading and installing the dependencies into the project.
+That&#8217;s the job of npm.</p>
+</div>
+<div class="paragraph">
+<p>In your terminal, execute the following command (while inside the project folder):</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ npm install</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This command installs the dependencies listed in <em class="path">package.json</em> into the <em class="path">node_modules/</em> folder inside the project.
+This folder does not get included in the UI bundle.
+The folder is safe to delete, though npm does a great job of managing it.</p>
+</div>
+<div class="paragraph">
+<p>You&#8217;ll notice another file which seems to be relevant here, <em class="path">package-lock.json</em>.
+npm uses this file to determine which concrete version of a dependency to use, since versions in <em class="path">package.json</em> are typically just a range.
+The information in this file makes the build reproducible across different machines and runs.</p>
+</div>
+<div class="paragraph">
+<p>If a new dependency must be resolved that isn&#8217;t yet listed in <em class="path">package-lock.json</em>, npm will update this file with the new information when you run <code>npm install</code>.
+Therefore, you&#8217;re advised to commit the <em class="path">package-lock.json</em> file into the repository whenever it changes.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="supported-build-tasks"><a class="anchor" href="#supported-build-tasks"></a>Supported build tasks</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Now that the dependencies are installed, you should be able to run the <code>gulp</code> command to find out what tasks the build supports:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ gulp --tasks-simple</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You should see:</p>
+</div>
+<div class="literalblock output">
+<div class="content">
+<pre>default
+clean
+lint
+format
+build
+bundle
+bundle:pack
+preview
+preview:build</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We&#8217;ll explain what each of these tasks are for and when to use them.</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="prerequisites.html">UI Development Prerequisites</a></span>
+  <span class="next"><a href="build-preview-ui.html">Build and Preview the UI</a></span>
+</nav>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright 2020 jMonkeyEngine Wiki Contributors. Licensed BSD-3.</p>
+</footer>
+<span hidden data-pagefind-filter="version:master"></span>
+<script type="module">
+  const currentVersion = 'master';
+  const expectedPath = `/docs/${currentVersion}/`;
+  const root = document.querySelector('#search');
+
+  if (!root) {
+    console.error('Search root not found');
+  } else {
+    root.innerHTML = `
+      <input type="search" class="wiki-search-input" placeholder="Search docs" aria-label="Search docs" />
+      <div class="wiki-search-results" hidden></div>
+    `;
+
+    const input = root.querySelector('.wiki-search-input');
+    const panel = root.querySelector('.wiki-search-results');
+
+    const pagefind = await import('/pagefind/pagefind.js');
+
+    function clearResults() {
+      panel.innerHTML = '';
+      panel.hidden = true;
+    }
+
+    function renderItems(items) {
+      if (!items.length) {
+        panel.innerHTML = '<p class="wiki-search-empty">No results in this version.</p>';
+        panel.hidden = false;
+        return;
+      }
+
+      const html = items
+        .map((item) => `
+          <article class="wiki-search-item">
+            <a class="wiki-search-link" href="${item.url}">${item.meta?.title || item.url}</a>
+            <p class="wiki-search-excerpt">${item.excerpt || ''}</p>
+          </article>
+        `)
+        .join('');
+
+      panel.innerHTML = html;
+      panel.hidden = false;
+    }
+
+    async function search(term) {
+      const query = term.trim();
+      if (!query) {
+        clearResults();
+        return;
+      }
+
+      const response = await pagefind.search(query, {
+        filters: {
+          version: currentVersion,
+        },
+      });
+
+      const loaded = await Promise.all(response.results.slice(0, 20).map((r) => r.data()));
+      const strict = loaded.filter((item) => {
+        try {
+          return new URL(item.url, window.location.origin).pathname.includes(expectedPath);
+        } catch (e) {
+          return (item.url || '').includes(expectedPath);
+        }
+      });
+
+      renderItems(strict.slice(0, 8));
+    }
+
+    let timer;
+    input.addEventListener('input', () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        search(input.value).catch((err) => {
+          console.error('Search failed', err);
+          panel.innerHTML = '<p class="wiki-search-empty">Search unavailable.</p>';
+          panel.hidden = false;
+        });
+      }, 160);
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!root.contains(event.target)) clearResults();
+    });
+  }
+</script>
+<script src="../_/js/site.js"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
